@@ -79,11 +79,7 @@
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="movement_forward" id="284">
-                        <next>
-                          <block type="movement_left" id="610"></block>
-                        </next>
-                      </block>
+                      <block type="movement_forward" id="284"></block>
                     </statement>
                     <value name="IF1">
                       <block type="logic_operation" id="629" inline="true">
@@ -121,11 +117,7 @@
                       </block>
                     </value>
                     <statement name="DO1">
-                      <block type="movement_forward" id="611">
-                        <next>
-                          <block type="movement_right" id="612"></block>
-                        </next>
-                      </block>
+                      <block type="movement_forward" id="611"></block>
                     </statement>
                     <value name="IF2">
                       <block type="logic_compare" id="537" inline="true">
