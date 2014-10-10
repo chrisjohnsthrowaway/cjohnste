@@ -34,7 +34,7 @@
             </value>
             <statement name="DO">
               <block type="controls_if" id="215" inline="false">
-                <mutation elseif="2"></mutation>
+                <mutation elseif="2" else="1"></mutation>
                 <value name="IF0">
                   <block type="logic_operation" id="536" inline="true">
                     <field name="OP">LAND</field>
@@ -108,6 +108,9 @@
                 </value>
                 <statement name="DO2">
                   <block type="movement_right" id="310"></block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="movement_stop" id="557"></block>
                 </statement>
               </block>
             </statement>
