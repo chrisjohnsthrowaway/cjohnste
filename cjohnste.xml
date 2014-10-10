@@ -37,7 +37,7 @@
                 <mutation elseif="2" else="1"></mutation>
                 <value name="IF0">
                   <block type="logic_operation" id="536" inline="true">
-                    <field name="OP">LAND</field>
+                    <field name="OP">LOR</field>
                     <value name="A">
                       <block type="logic_compare" id="495" inline="true">
                         <field name="OP">LT</field>
@@ -89,11 +89,7 @@
                   </block>
                 </value>
                 <statement name="DO1">
-                  <block type="movement_left" id="301">
-                    <next>
-                      <block type="movement_forward" id="577"></block>
-                    </next>
-                  </block>
+                  <block type="movement_left" id="301"></block>
                 </statement>
                 <value name="IF2">
                   <block type="logic_compare" id="540" inline="true">
