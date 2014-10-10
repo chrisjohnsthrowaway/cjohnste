@@ -28,8 +28,18 @@
           <block type="controls_if" id="215" inline="false">
             <mutation elseif="2"></mutation>
             <value name="IF0">
-              <block type="sensor_light" id="455">
-                <field name="LIGHT">LEFT</field>
+              <block type="logic_compare" id="495" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="sensor_object" id="502">
+                    <field name="OBJECT">REAR</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="509">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
               </block>
             </value>
             <statement name="DO0">
