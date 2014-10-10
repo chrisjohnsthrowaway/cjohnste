@@ -29,7 +29,7 @@
             <mutation elseif="2"></mutation>
             <value name="IF0">
               <block type="logic_compare" id="495" inline="true">
-                <field name="OP">EQ</field>
+                <field name="OP">GTE</field>
                 <value name="A">
                   <block type="sensor_object" id="502">
                     <field name="OBJECT">REAR</field>
