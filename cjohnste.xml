@@ -40,7 +40,7 @@
                     <field name="OP">LAND</field>
                     <value name="A">
                       <block type="logic_compare" id="495" inline="true">
-                        <field name="OP">LTE</field>
+                        <field name="OP">LT</field>
                         <value name="A">
                           <block type="sensor_object" id="502">
                             <field name="OBJECT">LEFTFRONT</field>
@@ -55,7 +55,7 @@
                     </value>
                     <value name="B">
                       <block type="logic_compare" id="528" inline="true">
-                        <field name="OP">LTE</field>
+                        <field name="OP">LT</field>
                         <value name="A">
                           <block type="sensor_object" id="529">
                             <field name="OBJECT">RIGHTFRONT</field>
