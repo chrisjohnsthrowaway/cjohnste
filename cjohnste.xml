@@ -32,7 +32,7 @@
                 <field name="OP">GTE</field>
                 <value name="A">
                   <block type="sensor_object" id="502">
-                    <field name="OBJECT">REAR</field>
+                    <field name="OBJECT">LEFTFRONT</field>
                   </block>
                 </value>
                 <value name="B">
