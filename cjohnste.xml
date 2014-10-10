@@ -10,16 +10,16 @@
       <block type="controls_whileUntil" id="83" inline="false">
         <field name="MODE">WHILE</field>
         <value name="NUMBER">
-          <block type="logic_compare" id="94" inline="true">
+          <block type="logic_compare" id="415" inline="true">
             <field name="OP">EQ</field>
             <value name="A">
-              <block type="variables_get" id="99">
+              <block type="variables_get" id="416">
                 <field name="VAR">run</field>
               </block>
             </value>
             <value name="B">
-              <block type="math_number" id="110">
-                <field name="NUM">1</field>
+              <block type="math_number" id="417">
+                <field name="NUM">0</field>
               </block>
             </value>
           </block>
@@ -28,8 +28,18 @@
           <block type="controls_if" id="215" inline="false">
             <mutation elseif="2"></mutation>
             <value name="IF0">
-              <block type="sensor_object" id="349">
-                <field name="OBJECT">REAR</field>
+              <block type="logic_compare" id="395" inline="true">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="407">
+                    <field name="VAR">run</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="414">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
               </block>
             </value>
             <statement name="DO0">
