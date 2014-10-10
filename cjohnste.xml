@@ -1,119 +1,175 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="514" inline="true" x="-6" y="6">
-    <field name="VAR">maxDistance</field>
+  <block type="variables_set" id="630" inline="true" x="-6" y="-30">
+    <field name="VAR">minDistance</field>
     <value name="VALUE">
-      <block type="math_number" id="509">
-        <field name="NUM">100</field>
+      <block type="math_number" id="631">
+        <field name="NUM">10</field>
       </block>
     </value>
     <next>
-      <block type="variables_set" id="23" inline="true">
-        <field name="VAR">run</field>
+      <block type="variables_set" id="514" inline="true">
+        <field name="VAR">maxDistance</field>
         <value name="VALUE">
-          <block type="math_number" id="77">
-            <field name="NUM">1</field>
+          <block type="math_number" id="509">
+            <field name="NUM">100</field>
           </block>
         </value>
         <next>
-          <block type="controls_whileUntil" id="83" inline="false">
-            <field name="MODE">WHILE</field>
-            <value name="NUMBER">
-              <block type="logic_compare" id="415" inline="true">
-                <field name="OP">EQ</field>
-                <value name="A">
-                  <block type="variables_get" id="416">
-                    <field name="VAR">run</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="417">
-                    <field name="NUM">1</field>
-                  </block>
-                </value>
+          <block type="variables_set" id="23" inline="true">
+            <field name="VAR">run</field>
+            <value name="VALUE">
+              <block type="math_number" id="77">
+                <field name="NUM">1</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="controls_if" id="215" inline="false">
-                <mutation elseif="2" else="1"></mutation>
-                <value name="IF0">
-                  <block type="logic_operation" id="536" inline="true">
-                    <field name="OP">LOR</field>
+            <next>
+              <block type="controls_whileUntil" id="83" inline="false">
+                <field name="MODE">WHILE</field>
+                <value name="NUMBER">
+                  <block type="logic_compare" id="415" inline="true">
+                    <field name="OP">EQ</field>
                     <value name="A">
-                      <block type="logic_compare" id="495" inline="true">
-                        <field name="OP">LT</field>
+                      <block type="variables_get" id="416">
+                        <field name="VAR">run</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="417">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="controls_if" id="215" inline="false">
+                    <mutation elseif="3" else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_operation" id="628" inline="true">
+                        <field name="OP">LAND</field>
                         <value name="A">
-                          <block type="sensor_object" id="502">
-                            <field name="OBJECT">LEFTFRONT</field>
+                          <block type="logic_compare" id="495" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="sensor_object" id="502">
+                                <field name="OBJECT">LEFTFRONT</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="527">
+                                <field name="VAR">maxDistance</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="variables_get" id="527">
+                          <block type="logic_compare" id="632" inline="true">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="sensor_object" id="633">
+                                <field name="OBJECT">LEFTFRONT</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="634">
+                                <field name="VAR">minDistance</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_forward" id="284">
+                        <next>
+                          <block type="movement_left" id="610"></block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_operation" id="629" inline="true">
+                        <field name="OP">LAND</field>
+                        <value name="A">
+                          <block type="logic_compare" id="528" inline="true">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="sensor_object" id="529">
+                                <field name="OBJECT">RIGHTFRONT</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="530">
+                                <field name="VAR">maxDistance</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="635" inline="true">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="sensor_object" id="636">
+                                <field name="OBJECT">RIGHTFRONT</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="637">
+                                <field name="VAR">minDistance</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="movement_forward" id="611">
+                        <next>
+                          <block type="movement_right" id="612"></block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF2">
+                      <block type="logic_compare" id="537" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="sensor_object" id="538">
+                            <field name="OBJECT">LEFTSIDE</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="539">
                             <field name="VAR">maxDistance</field>
                           </block>
                         </value>
                       </block>
                     </value>
-                    <value name="B">
-                      <block type="logic_compare" id="528" inline="true">
+                    <statement name="DO2">
+                      <block type="movement_left" id="301"></block>
+                    </statement>
+                    <value name="IF3">
+                      <block type="logic_compare" id="540" inline="true">
                         <field name="OP">LT</field>
                         <value name="A">
-                          <block type="sensor_object" id="529">
-                            <field name="OBJECT">RIGHTFRONT</field>
+                          <block type="sensor_object" id="541">
+                            <field name="OBJECT">RIGHTSIDE</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="variables_get" id="530">
+                          <block type="variables_get" id="542">
                             <field name="VAR">maxDistance</field>
                           </block>
                         </value>
                       </block>
                     </value>
+                    <statement name="DO3">
+                      <block type="movement_right" id="310"></block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="movement_stop" id="557"></block>
+                    </statement>
                   </block>
-                </value>
-                <statement name="DO0">
-                  <block type="movement_forward" id="284"></block>
-                </statement>
-                <value name="IF1">
-                  <block type="logic_compare" id="537" inline="true">
-                    <field name="OP">LT</field>
-                    <value name="A">
-                      <block type="sensor_object" id="538">
-                        <field name="OBJECT">LEFTSIDE</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="variables_get" id="539">
-                        <field name="VAR">maxDistance</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO1">
-                  <block type="movement_left" id="301"></block>
-                </statement>
-                <value name="IF2">
-                  <block type="logic_compare" id="540" inline="true">
-                    <field name="OP">LT</field>
-                    <value name="A">
-                      <block type="sensor_object" id="541">
-                        <field name="OBJECT">RIGHTSIDE</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="variables_get" id="542">
-                        <field name="VAR">maxDistance</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO2">
-                  <block type="movement_right" id="310"></block>
-                </statement>
-                <statement name="ELSE">
-                  <block type="movement_stop" id="557"></block>
                 </statement>
               </block>
-            </statement>
+            </next>
           </block>
         </next>
       </block>
