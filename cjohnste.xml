@@ -29,7 +29,7 @@
             <mutation elseif="2"></mutation>
             <value name="IF0">
               <block type="sensor_object" id="349">
-                <field name="OBJECT">LEFTSIDE</field>
+                <field name="OBJECT">REAR</field>
               </block>
             </value>
             <statement name="DO0">
