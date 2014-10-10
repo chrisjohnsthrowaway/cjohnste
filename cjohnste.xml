@@ -28,8 +28,8 @@
           <block type="controls_if" id="215" inline="false">
             <mutation elseif="2"></mutation>
             <value name="IF0">
-              <block type="sensor_button" id="447">
-                <field name="OBJECT">UP</field>
+              <block type="sensor_light" id="455">
+                <field name="LIGHT">LEFT</field>
               </block>
             </value>
             <statement name="DO0">
