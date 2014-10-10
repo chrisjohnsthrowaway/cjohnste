@@ -1,68 +1,118 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="variables_set" id="23" inline="true" x="-9" y="44">
-    <field name="VAR">run</field>
+  <block type="variables_set" id="514" inline="true" x="-6" y="6">
+    <field name="VAR">maxDistance</field>
     <value name="VALUE">
-      <block type="math_number" id="77">
-        <field name="NUM">1</field>
+      <block type="math_number" id="509">
+        <field name="NUM">100</field>
       </block>
     </value>
     <next>
-      <block type="controls_whileUntil" id="83" inline="false">
-        <field name="MODE">WHILE</field>
-        <value name="NUMBER">
-          <block type="logic_compare" id="415" inline="true">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="variables_get" id="416">
-                <field name="VAR">run</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="417">
-                <field name="NUM">1</field>
-              </block>
-            </value>
+      <block type="variables_set" id="23" inline="true">
+        <field name="VAR">run</field>
+        <value name="VALUE">
+          <block type="math_number" id="77">
+            <field name="NUM">1</field>
           </block>
         </value>
-        <statement name="DO">
-          <block type="controls_if" id="215" inline="false">
-            <mutation elseif="2"></mutation>
-            <value name="IF0">
-              <block type="logic_compare" id="495" inline="true">
-                <field name="OP">GTE</field>
+        <next>
+          <block type="controls_whileUntil" id="83" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="415" inline="true">
+                <field name="OP">EQ</field>
                 <value name="A">
-                  <block type="sensor_object" id="502">
-                    <field name="OBJECT">LEFTFRONT</field>
+                  <block type="variables_get" id="416">
+                    <field name="VAR">run</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="math_number" id="509">
-                    <field name="NUM">100</field>
+                  <block type="math_number" id="417">
+                    <field name="NUM">1</field>
                   </block>
                 </value>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="movement_forward" id="284"></block>
-            </statement>
-            <value name="IF1">
-              <block type="sensor_object" id="291">
-                <field name="OBJECT">LEFTFRONT</field>
+            <statement name="DO">
+              <block type="controls_if" id="215" inline="false">
+                <mutation elseif="2"></mutation>
+                <value name="IF0">
+                  <block type="logic_operation" id="536" inline="true">
+                    <field name="OP">LAND</field>
+                    <value name="A">
+                      <block type="logic_compare" id="495" inline="true">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="sensor_object" id="502">
+                            <field name="OBJECT">LEFTFRONT</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="527">
+                            <field name="VAR">maxDistance</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="528" inline="true">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="sensor_object" id="529">
+                            <field name="OBJECT">RIGHTFRONT</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="530">
+                            <field name="VAR">maxDistance</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_forward" id="284"></block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_compare" id="537" inline="true">
+                    <field name="OP">LTE</field>
+                    <value name="A">
+                      <block type="sensor_object" id="538">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="539">
+                        <field name="VAR">maxDistance</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="movement_left" id="301"></block>
+                </statement>
+                <value name="IF2">
+                  <block type="logic_compare" id="540" inline="true">
+                    <field name="OP">LTE</field>
+                    <value name="A">
+                      <block type="sensor_object" id="541">
+                        <field name="OBJECT">RIGHTFRONT</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="542">
+                        <field name="VAR">maxDistance</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO2">
+                  <block type="movement_right" id="310"></block>
+                </statement>
               </block>
-            </value>
-            <statement name="DO1">
-              <block type="movement_left" id="301"></block>
-            </statement>
-            <value name="IF2">
-              <block type="sensor_object" id="292">
-                <field name="OBJECT">RIGHTFRONT</field>
-              </block>
-            </value>
-            <statement name="DO2">
-              <block type="movement_right" id="310"></block>
             </statement>
           </block>
-        </statement>
+        </next>
       </block>
     </next>
   </block>
