@@ -66,4 +66,71 @@
       </block>
     </next>
   </block>
+  <block type="variables_set" id="322" inline="true" x="12" y="36">
+    <field name="VAR">run</field>
+    <value name="VALUE">
+      <block type="math_number" id="323">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="324" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="325" inline="true">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="326">
+                <field name="VAR">run</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="327">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_if" id="328" inline="false">
+            <mutation elseif="2"></mutation>
+            <value name="IF0">
+              <block type="logic_operation" id="329" inline="true">
+                <field name="OP">LAND</field>
+                <value name="A">
+                  <block type="sensor_object" id="330">
+                    <field name="OBJECT">LEFTSIDE</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="sensor_object" id="331">
+                    <field name="OBJECT">LEFTSIDE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_forward" id="332"></block>
+            </statement>
+            <value name="IF1">
+              <block type="sensor_object" id="333">
+                <field name="OBJECT">LEFTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="movement_left" id="334"></block>
+            </statement>
+            <value name="IF2">
+              <block type="sensor_object" id="335">
+                <field name="OBJECT">RIGHTFRONT</field>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="movement_right" id="336"></block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
 </xml>
